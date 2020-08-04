@@ -1,3 +1,7 @@
+<?php
+	require_once('config.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +12,14 @@
 <div>
 	<?php
 		if(isset($_POST["create"])){
-			echo "user sumbit";
+			$name = $_POST["name"];
+			$email = $_POST["email"];
+			$number = $_POST["number"];
+			$password = $_POST["password"];
+			
+			echo $name . " " . $password;
+			
+			$sql = "INSERT INTO users (name, email, number, password) VALUES(?,?,?,?)";
 		}
 	?>
 </div>
