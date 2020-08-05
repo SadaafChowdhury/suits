@@ -20,6 +20,14 @@
 			echo $name . " " . $password;
 			
 			$sql = "INSERT INTO users (name, email, number, password) VALUES(?,?,?,?)";
+			$stmtinsert=$db->prepare($sql);
+			$result = $stmtinsert->execute([$name, $email, $number, $password]);
+			if($result){
+				echo "Registration successful";
+			}
+			else{
+				echo "Registration unsuccessful";
+			}
 		}
 	?>
 </div>
