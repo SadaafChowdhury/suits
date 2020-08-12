@@ -12,6 +12,6 @@
 			$sql = "INSERT INTO users (name, email, number, password, address) VALUES('$name','$email','$number','$password','$address')";
 			$result = mysqli_query($conn, $sql);
 			
-			header("Location: index.php?signup=success");
+			header("Location: login.php?signup=success");
 		
 	?>

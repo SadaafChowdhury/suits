@@ -11,6 +11,7 @@
 		background-color:#CEE100;
 		padding: 10px;
 		box-shadow: 10px 10px 5px #aaaaaa;
+		
 	}
 	.fields{
 		border-radius: 20px;
@@ -31,21 +32,15 @@
 	
 </div>
 <div class="registrationDiv">
-<h1>Registration</h1>
-<p>Please fill up the form.</p>
+<h1>Login</h1>
+
 <form action="signup.php" method="POST">
-	<label><b>Name:</b></label><br>
-	<input class="fields" type="text" placeholder="Enter Name" name="name" id="name" required><br><br>
 	<label><b>Email:</b></label><br>
 	<input class="fields" type="email" placeholder="Enter Email" name="email" id="email" required><br><br>
-	<label><b>Phone Number:</b></label><br>
-	<input class="fields" type="text" placeholder="Enter Number" name="number" id="number" required><br><br>
-	<label><b>Address:</b></label><br>
-	<input class="fields" style="width:250px;" type="text" placeholder="Enter Address" name="address" id="address" required><br><br>
 	<label><b>Password:</b></label><br>
 	<input class="fields" type="text" placeholder="Enter Password" name="password" id="password" required><br><br><br><br>
 	
-	<input class="button1" type="submit" name="create" value="Sign Up"></input>
+	<input class="button1" type="submit" name="create" value="Login"></input>
 </form>
 </div>
 
