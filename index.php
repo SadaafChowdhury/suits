@@ -32,7 +32,13 @@
 	li a:hover {
 	  background-color: #111;
 	}
-
+	.footer {
+	   width: 100%;
+	   background-color: black;
+	   color: white;
+	   text-align: center;
+	   padding: 10px;
+	}
 </script>
 </head>
 <body>
@@ -69,5 +75,11 @@
   </a>
 </div>
 
+<!-- Footer-->
+<br><br>
+<div class="footer">
+  <p>Contact us on: </p>
+  <p>All rights reserved 2020</p>
+</div>
 </body>
 </html>
