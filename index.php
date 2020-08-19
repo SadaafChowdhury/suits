@@ -7,47 +7,19 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+<link rel="stylesheet" type="text/css" href="style.css">
 <script>
-	ul {
-	  list-style-type: none;
-	  margin: 0;
-	  padding: 0;
-	  overflow: hidden;
-	  background-color: #333;
-	}
-
-	li {
-	  float: left;
-	}
-
-	li a {
-	  display: block;
-	  color: white;
-	  text-align: center;
-	  padding: 14px 16px;
-	  text-decoration: none;
-	}
-
-	li a:hover {
-	  background-color: #111;
-	}
-	.footer {
-	   width: 100%;
-	   background-color: black;
-	   color: white;
-	   text-align: center;
-	   padding: 10px;
-	}
+	
 </script>
 </head>
+
 <body>
 <!-- Navigation bar-->
 
 <ul>
   <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
+  <li><a href="#news">Products</a></li>
+  <li><a href="#contact">Cart</a></li>
   <li><a href="#about">About</a></li>
 </ul>
 
@@ -73,8 +45,19 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div>
+</div><br><br><br>
+<div class="article">
+	<p>
+		Do you like Mens Suits? Take a moment and think about it. Mens Suits can be many things in terms of men's apparel.
+		They have been around for since the 17th century in one form or another. Mens Suits of course are nothing more than
+		a jacket that buttons and a matching pair of slacks. If you're a frequent Church Goer, you know you need something
+		proper to wear and look good too. That's where the Church Suit comes to play. A Church Suit is a men's suit that is
+		generally more fashionable than your boring old business suit. A suit is more than just clothing for a man. It's a
+		way of expression like no other. The suit is and always will be a matching set of clothes for a man that has become
+		the uniform of civilization and business.
 
+	</p>
+</div>
 <!-- Footer-->
 <br><br>
 <div class="footer">
