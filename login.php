@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Registration</title>
+<title>Login</title>
 
 <style>
 	
@@ -44,29 +44,41 @@
 </form>
 </div>
 <?php
-	$dbServername = "localhost";
-	$dbUsername="root";
-	$dbPassword ="";
-	$dbName = "suits";
+	include("config.php");
+    session_start();
 	
-	$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
-	
-	if(isset($_POST['submit'])){
-		$email = $_POST["email"];
-		$password = $_POST["password"];
-	}
-	$select = mysql_query($conn, "select * from 'users'"); //query to select all rows from users table
-	while($result=mysql_fetch_arrayi($select)){
-		$mail = $result['email'];
-		$passwords = $result['password'];
+	$count=0;
+	if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // username and password sent from form 
+      
+      $email = mysqli_real_escape_string($conn,$_POST['email']);
+      $password = mysqli_real_escape_string($conn,$_POST['password']); 
+      
+      $sql = "SELECT id 
+			  FROM users 
+			  WHERE email = '$email' and password = '$password'";
+      $result = mysqli_query($conn,$sql);
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      
+      
+      $count = mysqli_num_rows($result);
+      
+      // If result matched $myusername and $mypassword, table row must be 1 row
 		
-		if($passwords!=$password || $mail!=$email){
-			echo "Try again, email or password is incorrect.";
+      if($count == 1) {
+         $_SESSION['email'] = $email;
+         
+         header("location: index.php");
+      }
+	  elseif ($count==0) {
+		  echo "<p style='color:black; text-align: center;'>" . "Enter Credentials" ."</p>";
+		  $count=3;
 		}
-		else{
-			echo "Login Successful";
-		}
-	}
+	  else {
+         $error = "Your Login Name or Password is invalid";
+		 echo "<p style='color:red; text-align: center;'>" . $error ."</p>";
+      }
+   }
 ?>
 </body>
 </html>

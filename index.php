@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+   include('session.php');
+?>
 <html>
 <head>
 <title>Suits</title>
@@ -58,6 +61,7 @@
 
 	</p>
 </div>
+<h1>Welcome <?php echo $_SESSION; ?></h1> 
 <!-- Footer-->
 <br><br>
 <div class="footer">
