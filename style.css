@@ -1,4 +1,4 @@
-ul {
+	ul {
 	  list-style-type: none;
 	  margin: 0;
 	  padding: 0;
@@ -56,4 +56,35 @@ ul {
 
 	.grid-containerAboutUs > div {
 	  margin:auto;
+	}
+	.registrationDiv{
+		width: 400px;
+		margin: auto;
+		background-color:#CEE100;
+		padding: 10px;
+		box-shadow: 10px 10px 5px #aaaaaa;
+		
+	}
+	.fields{
+		border-radius: 20px;
+		border-style:none;
+		height: 30px;
+	}
+	.button1{
+		border-radius:20px;
+		height: 30px;
+		width: 80px;
+		background-color:#19C600;
+	}
+	.users{
+		margin:auto;
+		border: 1px solid black;
+	}
+	.orderlist{
+		margin:auto;
+		border: 1px solid black;
+	}
+	.addProducts{
+		margin:auto;
+		border: 1px solid black;
 	}

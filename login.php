@@ -2,9 +2,8 @@
 <html>
 <head>
 <title>Login</title>
-
+<link rel="stylesheet" type="text/css" href="style.css">
 <style>
-	
 	.registrationDiv{
 		width: 400px;
 		margin: auto;
@@ -24,13 +23,12 @@
 		width: 80px;
 		background-color:#19C600;
 	}
+	
 </style>
 </head>
 <body style="background-color:#F1FF64;">
 
-<div>
-	
-</div>
+
 <div class="registrationDiv">
 <h1>Login</h1>
 

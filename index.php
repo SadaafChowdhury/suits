@@ -25,6 +25,7 @@
   <li><a href="#contact">Cart</a></li>
   <li><a href="#about">About</a></li>
   <li><a href = "logout.php">Sign Out</a></li>
+  <li style="float: right;"><a href = "#">Welcome <?php echo $login_session; ?></a></li>
 </ul>
 
 <!-- SlideShow-->
@@ -62,7 +63,7 @@
 
 	</p>
 </div>
-<h1>Welcome <?php echo $login_session; ?></h1> 
+ 
 
 <!-- Footer-->
 <br><br>
