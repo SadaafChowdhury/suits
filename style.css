@@ -29,6 +29,9 @@
 	   padding: 10px;
 	}
 	
+	.loginLinks{
+		color: red;
+	}
 	.article{
 		padding-left:30%;
 		padding-right:30%;
@@ -88,3 +91,15 @@
 		margin:auto;
 		border: 1px solid black;
 	}
+	td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.users{
+	padding:8px;
+}

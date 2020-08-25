@@ -12,7 +12,7 @@
 <body>
 
 <ul>
-  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="index.php">Home</a></li>
   <li><a href="#news">Products</a></li>
   <li><a href="#contact">Cart</a></li>
   <li><a href="#about">About</a></li>
@@ -21,18 +21,27 @@
 <div class="users">
 	<?php
 	include_once('config.php');
-	$query = $sqlLink->query("SELECT name FROM list_users ORDER by id");
-	while($row = $query->fetch_array()){
-    echo "<tr>";
-    echo "<td>".$row['uuid']."</td>";
-    echo "<td>".$row['firstname'].$row['lastname']."</td>";
-    echo "<td>".$row['email']."</td>";
-    echo "<td>".$row['security_key']."</td>";
-    echo "<td>".$row['phone_no']."</td>";
-    echo "<td>".$row['activated']."</td>";
-    echo "<td>".$row['role']."</td>";
-    echo "</tr>";
-}
+	
+	$sql = "SELECT id, name, email, number, address
+			FROM users
+			ORDER BY id";
+	$result = $conn->query($sql);
+
+	if ($result->num_rows > 0) {
+		// output data of each row
+		while($row = $result->fetch_assoc()) {
+			echo "<tr>";
+			echo "<td>".$row['id']."</td>"." ";
+			echo "<td>".$row['name']."</td>"." ";
+			echo "<td>".$row['email']."</td>"." ";
+			echo "<td>".$row['number']."</td>"." ";
+			echo "<td>".$row['address']."</td>"." ";
+			echo "</tr>";
+			echo "<br>";
+		}
+	} else {
+		echo "0 results";
+	}
 ?>
 </div>
 

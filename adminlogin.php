@@ -29,10 +29,10 @@
 </head>
 
 
-<body>
+<body style="background-color:#DAF7A6;">
 
 <div class="registrationDiv">
-<h1>Login</h1>
+<h1>Admin Login</h1>
 
 <form method="POST">
 	<label><b>Email:</b></label><br>
@@ -42,7 +42,23 @@
 	
 	<input class="button1" type="submit" name="submit" value="Login"></input>
 </form>
+	<br><br>
+	<a class="loginLinks" href="login.php">User Login</a>
+	<a class="loginLinks" href="registration.php">Registration</a>
 </div>
+<?php
+$name = $email = "";
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $email = $_POST["email"];
+  $password = $_POST["password"];
+  
+  if($email == "admin@gmail.com" and $password == "admin") {
+         
+         header("location: adminpage.php");
+      }
+}
+	
+?>
 </body>
 </html>

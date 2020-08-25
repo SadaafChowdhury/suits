@@ -40,6 +40,9 @@
 	
 	<input class="button1" type="submit" name="submit" value="Login"></input>
 </form>
+	<br><br>
+	<a  class="loginLinks" href="adminlogin.php">Admin Login</a>
+	<a  class="loginLinks" href="registration.php">Registration</a>
 </div>
 <?php
 	include("config.php");

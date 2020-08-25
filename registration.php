@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Registration</title>
-
+<link rel="stylesheet" type="text/css" href="style.css">
 <style>
 	
 	.registrationDiv{
@@ -47,6 +47,9 @@
 	
 	<input class="button1" type="submit" name="create" value="Sign Up"></input>
 </form>
+	<br><br>
+	<a  class="loginLinks" href="login.php">User Login</a>
+	<a  class="loginLinks" href="adminlogin.php">Admin Login</a>
 </div>
 
 </body>
