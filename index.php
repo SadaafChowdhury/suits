@@ -20,10 +20,10 @@
 <!-- Navigation bar-->
 
 <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">Products</a></li>
-  <li><a href="#contact">Cart</a></li>
-  <li><a href="#about">About</a></li>
+  <li><a class="active" href="index.php">Home</a></li>
+  <li><a href="products.php">Products</a></li>
+  <li><a href="cart.php">Cart</a></li>
+  <li><a href="aboutus.html">About Us</a></li>
   <li><a href = "logout.php">Sign Out</a></li>
   <li style="float: right;"><a href = "#">Welcome <?php echo $login_session; ?></a></li>
 </ul>

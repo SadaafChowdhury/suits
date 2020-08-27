@@ -50,7 +50,18 @@ dsds
 </div>
 
 <div class="addProducts">
-dfdf
+<form action="addproduct.php" method="POST">
+	<label><b>Fabric Name:</b></label><br>
+	<input class="fields" type="text" placeholder="Enter Fabric Name" name="fabricName" id="fabricName" required><br><br>
+	<label><b>Description:</b></label><br>
+	<input class="fields" style="width:250px;"  type="text" placeholder="Enter Description" name="description" id="description" required><br><br>
+	<label><b>Price:</b></label><br>
+	<input class="fields" type="number" placeholder="Enter Price" name="price" id="price" required><br><br>
+	<label><b>Image:</b></label><br>
+	<input type="file" name="image" id="image" required><br><br>
+	
+	<input type="submit" name="addproduct" value="Add Product"></input>
+</form>
 </div>
 
 </body>
