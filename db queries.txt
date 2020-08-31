@@ -14,6 +14,13 @@
     fabricName varchar(50),
     description varchar(100),
     price int,
-    picture image,
+    `name` varchar(200) NOT NULL,
+    `image` longtext NOT NULL,
     PRIMARY KEY (id)
 );
+
+4. INSERT INTO products(fabricName, description, price, name) 
+   VALUES('$fabricName','$description','$price','".$name."');
+   
+5. SELECT fabricName, description, price, name 
+   FROM products;

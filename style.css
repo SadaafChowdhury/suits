@@ -92,24 +92,29 @@
 		border: 1px solid black;
 	}
 	td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
+	  border: 1px solid #dddddd;
+	  text-align: left;
+	  padding: 8px;
+	}
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-.users{
-	padding:8px;
-	width: 50%;
-	margin: auto;
-	
-}
+	tr:nth-child(even) {
+	  background-color: #dddddd;
+	}
+	.users{
+		padding:8px;
+		width: 50%;
+		margin: auto;
+		
+	}
 
-.addProducts{
-	padding:8px;
-	width: 50%;
-	margin: auto;
-	
-}
+	.addProducts{
+		padding:8px;
+		width: 50%;
+		margin: auto;
+		
+	}
+	.addToCart{
+		color: white;
+		background-color:#2249FF;
+		border-radius: 4px;
+	}
