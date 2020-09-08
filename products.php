@@ -32,14 +32,17 @@ if ($result->num_rows > 0) {
 	$image = $row['name'];
 	$image_src = "upload/".$image;
 	
-	echo "<div style='text-align: center; padding: 10px;'>";
+	
+	echo "<div class='productBox'>";
+	foreach ($productsBox as $product):
+        <a href="'products.php?page=product&id='<?php=$row['id']?>" class="product">
 	echo "<div class='card'>";
 	echo "<img src='".$image_src."' alt='Avatar' style='width:100%'>";
 	echo  "<div class='container'>";
 	echo   "<h4><b>".$fabricName."</b></h4>";
 	echo	"<p>".$description."</p>";
 	echo	"<p>".$price."</p>";
-	echo	"<button class='addToCart'>Add to Cart</button>";
+	echo	"<input type='submit'>";
 	echo  "</div>";
 	echo "</div>";
 	echo "</div>";
