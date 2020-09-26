@@ -1,43 +1,53 @@
 <?php
+
+include("config.php");
 // Check to make sure the id parameter is specified in the URL
 if (isset($_GET['id'])) {
     // Prepare statement and execute, prevents SQL injection
-    $stmt = $pdo->prepare('SELECT * FROM products WHERE id = ?');
-    $stmt->execute([$_GET['id']]);
+	$id = $_GET['id'];
+	
+	$sql = "select *
+			from products
+			WHERE id='$id'";
+	$result = $conn->query($sql);
+	$product = $result->fetch_assoc();
+	
+    //$stmt = $pdo->prepare("SELECT * FROM products WHERE id = '$id'");
+    //$stmt->execute([$_GET['id']]);
     // Fetch the product from the database and return the result as an Array
-    $product = $stmt->fetch(PDO::FETCH_ASSOC);
-    // Check if the product exists (array is not empty)
-    if (!$product) {
-        // Simple error to display if the id for the product doesn't exists (array is empty)
+    //$product = $stmt->fetch(PDO::FETCH_ASSOC);
+	if (!$product) {
+        // Simple error to display if the id for the product doesnt exists (array is empty)
         die ('Product does not exist!');
     }
 } else {
-    // Simple error to display if the id wasn't specified
+    // Simple error to display if the id wasnt specified'
     die ('Product does not exist!');
 }
+	$image = $product['name'];
+	$image_src = "upload/".$image;
+	
+    // Check if the product exists (array is not empty)
+    
 ?>
 
-<?=template_header('Product')?>
+
 
 <div class="product content-wrapper">
-    <img src="imgs/<?=$product['img']?>" width="500" height="500" alt="<?=$product['name']?>">
+    <img src="<?=$image_src ?>" width="200" height="200" alt="<?=$product['name']?>">
     <div>
-        <h1 class="name"><?=$product['name']?></h1>
+        <h1 class="name"><?=$product['fabricName']?></h1>
         <span class="price">
             &dollar;<?=$product['price']?>
-            <?php if ($product['rrp'] > 0): ?>
-            <span class="rrp">&dollar;<?=$product['rrp']?></span>
-            <?php endif; ?>
         </span>
-        <form action="index.php?page=cart" method="post">
+        <form action="cart.php?page=<?=$product['id']?>" method="post">
             <input type="number" name="quantity" value="1" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
             <input type="hidden" name="product_id" value="<?=$product['id']?>">
             <input type="submit" value="Add To Cart">
         </form>
         <div class="description">
-            <?=$product['desc']?>
+            <?=$product['description']?>
         </div>
     </div>
 </div>
 
-<?=template_footer()?>
