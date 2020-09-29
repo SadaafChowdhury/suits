@@ -92,14 +92,17 @@
 	.users{
 		margin:auto;
 		border: 1px solid black;
+		box-shadow: 5px 10px;
 	}
 	.orderlist{
 		margin:auto;
 		border: 1px solid black;
+		box-shadow: 5px 10px;
 	}
 	.addProducts{
 		margin:auto;
 		border: 1px solid black;
+		box-shadow: 5px 10px;
 	}
 	td, th {
 	  border: 1px solid #dddddd;

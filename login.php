@@ -73,11 +73,11 @@
          header("location: index.php");
       }
 	  elseif ($count==0) {
-		  echo "<p style='color:black; text-align: center;'>" . "Enter Credentials" ."</p>";
+		  echo "<p style='color:black; text-align: center;'>" . "Your Login email or Password is invalid" ."</p>";
 		  $count=3;
 		}
 	  else {
-         $error = "Your Login Name or Password is invalid";
+         $error = "Your Login email or Password is invalid";
 		 echo "<p style='color:red; text-align: center;'>" . $error ."</p>";
       }
    }

@@ -33,9 +33,10 @@ if ($result->num_rows > 0) {
 	$image_src = "upload/".$image;
 	
 	
+	
 	echo "<div class='productBox'>";
-	foreach ($productsBox as $product):
-        <a href="'products.php?page=product&id='<?php=$row['id']?>" class="product">
+	//foreach ($productsBox as $product){
+        //<a href="'products.php?page=product&id="'<?php=$row['id']?>' class="product">
 	echo "<div class='card'>";
 	echo "<img src='".$image_src."' alt='Avatar' style='width:100%'>";
 	echo  "<div class='container'>";
@@ -46,14 +47,12 @@ if ($result->num_rows > 0) {
 	echo  "</div>";
 	echo "</div>";
 	echo "</div>";
-	
 	}
-} else {
+	
+	} else {
 		echo "0 results";
 	}
 
 ?>
-
-
 </body>
 </html>

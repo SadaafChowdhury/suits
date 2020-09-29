@@ -9,7 +9,8 @@
 			$password = $_POST["password"];
 			
 			
-			$sql = "INSERT INTO users (name, email, number, password, address) VALUES('$name','$email','$number','$password','$address')";
+			$sql = "INSERT INTO users (name, email, number, password, address) 
+					VALUES('$name','$email','$number','$password','$address')";
 			$result = mysqli_query($conn, $sql);
 			
 			header("Location: login.php?signup=success");

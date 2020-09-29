@@ -19,6 +19,7 @@
 </ul>
 
 <div class="users">
+	<h1>Users</h1>
 	<?php
 	include_once('config.php');
 	
@@ -38,17 +39,40 @@
 			echo "<td>".$row['address']."</td>"." ";
 			echo "</tr>";
 			echo "<br>";
+			echo "<hr>";
 		}
 	} else {
 		echo "0 results";
 	}
 ?>
 </div>
-
+<br><br>
 <div class="orderlist">
-dsds
-</div>
+<h1>Orderlist</h1>
+<?php
+$sql = "SELECT id, fabricName, email, address
+			FROM orderlist
+			ORDER BY id";
+	$result = $conn->query($sql);
 
+	if ($result->num_rows > 0) {
+		// output data of each row
+		while($row = $result->fetch_assoc()) {
+			echo "<tr>";
+			echo "<td>".$row['id']."</td>"." ";
+			echo "<td>".$row['fabricName']."</td>"." ";
+			echo "<td>".$row['email']."</td>"." ";
+			echo "<td>".$row['address']."</td>"." ";
+			echo "</tr>";
+			echo "<br>";
+			echo "<hr>";
+		}
+	} else {
+		echo "0 results";
+	}
+?>
+</div>
+<br><br>
 <?php
 include("config.php");
 
@@ -84,6 +108,7 @@ if(isset($_POST['addproduct'])){
 ?>
 
 <div class="addProducts">
+<h1>Add Products</h1>
 <form method="post" action="" enctype='multipart/form-data'>
 	<label><b>Fabric Name:</b></label><br>
 	<input class="fields" type="text" placeholder="Enter Fabric Name" name="fabricName" id="fabricName" required><br><br>
